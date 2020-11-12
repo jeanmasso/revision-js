@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <fieldset>
+            <legend>Calcultrice :</legend>
+            <label for="nbrun">Nombre 1 :</label>
+            <input type="text" name="nbrun" id="nbrun">
+            <label for="nbrdeux">Nombre 2 :</label>
+            <input type="text" name="nbrdeux" id="nbrdeux">
+            <button id="plus"> + </button>
+            <button id="moins"> - </button>
+            <button id="fois"> * </button>
+            <button id="diviser"> / </button>
+        </fieldset>
+    </form>
+
+    <script src="definition-fonctions.js"></script>
+    <script>
+        document.getElementById("plus").addEventListener("click", function () {
+            var c = parseInt(document.getElementById('nbrun').value);
+            var d = parseInt(document.getElementById('nbrdeux').value);
+            var result = plus(c, d);
+            alert(result);
+        });
+        document.getElementById("moins").addEventListener("click", function () {
+            var c = parseInt(document.getElementById('nbrun').value);
+            var d = parseInt(document.getElementById('nbrdeux').value);
+            var result = moins(c, d);
+            alert(result);
+        });
+        document.getElementById("fois").addEventListener("click", function () {
+            var c = parseInt(document.getElementById('nbrun').value);
+            var d = parseInt(document.getElementById('nbrdeux').value);
+            var result = fois(c, d);
+            alert(result);
+        });
+        document.getElementById("diviser").addEventListener("click", function () {
+            var c = parseInt(document.getElementById('nbrun').value);
+            var d = parseInt(document.getElementById('nbrdeux').value);
+            var result = (c, d);
+            alert(result);
+        });
+
+    </script>
+</body>
+
+</html>
